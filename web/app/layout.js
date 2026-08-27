@@ -29,10 +29,16 @@ function Navbar() {
         <a href="/video" className="navbar-link">Video</a>
       </div>
       <form action="/search" className="navbar-search">
-        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" style={{color:'var(--text-muted)'}}>
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" style={{color:'var(--text-muted)', flexShrink:0}}>
           <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
         </svg>
         <input name="q" placeholder="Cari manga, video..." id="navbar-search-input" />
+        <button type="submit" id="navbar-search-btn" aria-label="Cari" style={{
+          background: 'linear-gradient(135deg, var(--accent), var(--accent2))',
+          border: 'none', borderRadius: '6px', padding: '4px 10px',
+          color: '#fff', fontSize: '12px', fontWeight: 600,
+          cursor: 'pointer', transition: 'opacity 0.2s', flexShrink: 0,
+        }}>Cari</button>
       </form>
     </nav>
   );
